@@ -5,14 +5,10 @@ import {
 } from "react-router-dom";
 import { createClient } from '@supabase/supabase-js'
 import { App } from './App';
-import { Login } from './Pages/Login/Login';
 import { Dashboard } from './Pages/Dashboard/Dashboard';
 import './normalize.css'
-
-
-const supabaseUrl = import.meta.env.VITE_PROJECT_URL_SUPABASE
-const supabaseKey = import.meta.env.VITE_API_KEY_SUPABASE
-export const supabase = createClient(supabaseUrl, supabaseKey)
+import { LoginPage } from './LoginPage';
+import { MainPage } from './Pages/MainPage';
 
 const router = createBrowserRouter([
   {
@@ -27,10 +23,13 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <Login />,
+    element: <LoginPage />,
   },
 ]);
 
+const supabaseUrl = import.meta.env.VITE_PROJECT_URL_SUPABASE
+const supabaseKey = import.meta.env.VITE_API_KEY_SUPABASE
+export const supabase = createClient(supabaseUrl, supabaseKey)
 
 const container = document.getElementById('root');
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
