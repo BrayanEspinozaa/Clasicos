@@ -8,7 +8,8 @@ import { App } from './App';
 import { Dashboard } from './Pages/Dashboard/Dashboard';
 import './normalize.css'
 import { LoginPage } from './LoginPage';
-import { MainPage } from './Pages/MainPage';
+import { Users } from './Pages/Users/Users';
+import { Products } from './Pages/Products/Products';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,14 @@ const router = createBrowserRouter([
       {
         path: 'dashboard',
         element: <Dashboard />
+      },
+      {
+        path: 'users',
+        element: <Users />
+      },
+      {
+        path: 'products',
+        element: <Products />
       },
     ],
   },
