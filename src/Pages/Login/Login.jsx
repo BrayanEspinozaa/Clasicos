@@ -94,7 +94,7 @@ export const Login = () => {
                                     isSubmitting,
                                 }) => (
                                     <form onSubmit={handleSubmit}
-                                        className={`flex flex-col gap-4 justify-center items-center${width > 700 ? 'w-[30vw]' : 'w-[90vw]'} px-10`}
+                                        className={`flex flex-col gap-4 justify-center items-center ${width > 1100 ? 'w-2/3' : width > 700 ? 'w-[40vw]' : 'w-[90vw]'} px-10`}
                                     >
                                         {
                                             width < 700 &&
@@ -144,7 +144,7 @@ export const Login = () => {
 
                                         </div>
 
-                                        <Button className='w-full' design='filled' type='submit'>Ingresar</Button>
+                                        <Button className='w-full mt-5' design='filled' type='submit'>Ingresar</Button>
                                     </form>
 
                                 )}
