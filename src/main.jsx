@@ -10,6 +10,7 @@ import './normalize.css'
 import { LoginPage } from './LoginPage';
 import { Users } from './Pages/Users/Users';
 import { Products } from './Pages/Products/Products';
+import { configApp } from './config';
 
 const router = createBrowserRouter([
   {
@@ -36,8 +37,8 @@ const router = createBrowserRouter([
   },
 ]);
 
-const supabaseUrl = import.meta.env.VITE_PROJECT_URL_SUPABASE
-const supabaseKey = import.meta.env.VITE_API_KEY_SUPABASE
+const supabaseUrl = configApp.SUPABASE.VITE_PROJECT_URL_SUPABASE
+const supabaseKey = configApp.SUPABASE.VITE_API_KEY_SUPABASE
 export const supabase = createClient(supabaseUrl, supabaseKey)
 
 const container = document.getElementById('root');
